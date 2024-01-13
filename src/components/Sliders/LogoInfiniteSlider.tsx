@@ -33,9 +33,13 @@ const logoObjectArray = [
     },
 ]
 
-export default function LogoInfiniteSlider(props : {"max-width" ?: number}) {
+const handleClassName = (extraClassName: string | undefined) =>
+    "w-full inline-flex flex-nowrap border border-[#4D5358] rounded-[24px] relative items-center " +
+    extraClassName || "";
+
+export default function LogoInfiniteSlider(props : {"max-width" ?: number, extraClassName ?: string}) {
     return (
-    <div className="w-full inline-flex flex-nowrap border border-[#4D5358] rounded-[24px] relative items-center"
+    <div className={handleClassName(props.extraClassName)}
         style={{"maxWidth": props["max-width"]}}>
         <div
             className="w-full h-[105%] -top-[2px] left-[3px] absolute

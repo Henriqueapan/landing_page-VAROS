@@ -26,10 +26,10 @@ type TBlurredLightProductCardDecoration = {
 }
 
 export default function Hero() {
-    return <ContentWrapper Element="section" className="flex flex-row justify-between">
-        <header>
+    return <ContentWrapper Element="section" className="flex flex-row justify-between max-w-[1100px]">
+        <header className="flex flex-col">
             <h1 className="text-center lg:text-left font-bold text-4xl lg:text-5xl xl:text-6xl mb-6
-                lg:max-w-[487px]"
+                xl:max-w-[564px] lg:max-w-[487px]"
             >
                 Investir de forma mais inteligente passa por aqui.
             </h1>
@@ -41,10 +41,10 @@ export default function Hero() {
             >
                 Comprar agora <ArrowRight/>
             </Anchor>
-            <LogoInfiniteSlider max-width={350}/>
+            <LogoInfiniteSlider extraClassName="self-center lg:self-start" max-width={350}/>
         </header>
 
-        <div className="xl:mr-[100px]">
+        <div className="hidden lg:block">
             <ul className="py-5 w-[350px] flex flex-col">
                 <ProductHeroCardListItem alignment="start" margin-bottom={73} productName="Carteira FATOR"
                                          productLogoSrc={Fator}
@@ -84,7 +84,6 @@ export default function Hero() {
 }
 
 function ProductHeroCardListItem(props : TProductHeroCardListItem) {
-    // TODO: Consertar alinhamento da decoração de luz borrada
     return (
         <li className="w-fit relative z-10"
             style={{"marginBottom": props["margin-bottom"], "alignSelf": props.alignment}}>
@@ -114,9 +113,9 @@ function handleProductCardDecorationAligment(alignmentType : string) {
         case "center":
             return 25;
         case "end":
-            return 50;
+            return 75;
         case "start":
-            return -5;
+            return 25;
         default:
             return 0;
     }
@@ -139,6 +138,7 @@ function BlurredLightProductCardDecoration(props : TBlurredLightProductCardDecor
             "bottom": 0,
             "zIndex": -1,
             "left": props.alignment + "%",
+            "transform": "translateX(-50%)",
         }}>
 
         </div>
