@@ -13,7 +13,7 @@ export const handleStylization = (stylization: TStylization, optClassname ?: str
             else className;
             break;
         case "outlined":
-            if(stylization.twColor === "gray") className += "bg-grey-900 text-grey-100";
+            if(stylization.twColor === "gray") className += "border border-grey-800 bg-grey-900 text-grey-100";
             else className;
             break;
         case "blended":

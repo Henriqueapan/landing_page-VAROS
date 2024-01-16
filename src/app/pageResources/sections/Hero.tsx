@@ -28,12 +28,12 @@ type TBlurredLightProductCardDecoration = {
 export default function Hero() {
     return <ContentWrapper Element="section" className="flex flex-row justify-between max-w-[1100px]">
         <header className="flex flex-col">
-            <h1 className="text-center lg:text-left font-bold text-4xl lg:text-5xl xl:text-6xl mb-6
+            <h1 className="text-grey-100 text-center lg:text-left font-bold text-4xl lg:text-5xl xl:text-6xl mb-6
                 xl:max-w-[564px] lg:max-w-[487px]"
             >
                 Investir de forma mais inteligente passa por aqui.
             </h1>
-            <h2 className="text-center lg:text-left text-lg leading-[120%] mb-[32px] lg:max-w-[487px]">
+            <h2 className="text-grey-200 text-center lg:text-left text-lg leading-[120%] mb-[32px] lg:max-w-[487px]">
                 Fazemos de tudo para que você possa conquistar seus sonhos da melhor forma possível.
             </h2>
             <Anchor stylization={{type: "blended", twColor: "green"}} className="w-full max-w-[263px] mx-auto lg:mx-0
