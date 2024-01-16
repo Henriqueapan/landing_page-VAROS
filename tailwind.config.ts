@@ -18,7 +18,8 @@ const config: Config = {
         }
       },
       screens: {
-        "lg": "827px",
+        // "lg": "827px",
+        "lg": "900px",
         "xl": "1260px"
       },
       fontSize: {
