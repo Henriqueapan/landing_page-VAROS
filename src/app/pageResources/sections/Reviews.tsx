@@ -87,7 +87,7 @@ export default function Reviews() {
               effect={"creative"}
               modules={[EffectCreative, Autoplay]}
               autoplay={{
-                delay: 2e3,
+                delay: 5e3,
                 disableOnInteraction: false,
                 stopOnLastSlide: false,
               }}
