@@ -5,6 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between py-24 bg-c-black text-doc">
       <Section.Hero />
       <Section.Conteudos />
+      <Section.Reviews />
       <Section.Cadastro />
     </main>
   );

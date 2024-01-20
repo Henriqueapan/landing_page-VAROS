@@ -12,7 +12,9 @@ export default function ContentWrapper({
   Element,
 }: TContentWrapper) {
   return (
-    <Element className={"w-full max-w-[1200px] px-6 mx-auto " + className}>
+    <Element
+      className={"w-full max-w-[1200px] px-[16px] lg:px-6 mx-auto " + className}
+    >
       {children}
     </Element>
   );
