@@ -7,6 +7,7 @@ export default function Home() {
       <Section.Conteudos />
       <Section.Reviews />
       <Section.Cadastro />
+      <Section.Footer />
     </main>
   );
 }

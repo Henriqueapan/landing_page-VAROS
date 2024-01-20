@@ -21,13 +21,15 @@ const reviewsSliderContent: Array<TSliderCard> = [
   {
     text:
       "Conteúdos preparados para trazer mais segurança, independente do seu nível. Conteúdos preparados para " +
-      "trazer mais segurança, independente do seu nível.Conteúdos preparados para trazer mais segurança, independente do seu nível.",
+      "trazer mais segurança, independente do seu nível.Conteúdos preparados para trazer mais segurança, independente" +
+      " do seu nível.",
     author: "Assinante VAROS",
   },
   {
     text:
       "Eu acompanho vários gestores de fundo e educadores financeiros. Tu de longe és um dos que mais contribui" +
-      " para minha construção de conhecimento. A forma que colocas coisas que outras pessoas fazem parecer complexas de uma forma super simples e ginal. Parabéns! E continue.",
+      " para minha construção de conhecimento. A forma que colocas coisas que outras pessoas fazem parecer complexas " +
+      "de uma forma super simples e ginal. Parabéns! E continue.",
     author: "Assinante VAROS",
   },
   {

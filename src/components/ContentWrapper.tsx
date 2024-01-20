@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 type TContentWrapper = {
   children: ReactNode;
   className?: string;
-  Element: "div" | "section";
+  Element: "div" | "section" | "footer";
 };
 
 export default function ContentWrapper({
