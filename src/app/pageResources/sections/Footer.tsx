@@ -87,10 +87,12 @@ export default function Footer() {
     <ContentWrapper Element="footer" className="mt-32 pt-14">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col justify-between gap-6">
-          <Image
-            src={VarosText}
-            alt="Logotipo da VAROS com nome da empresa em baixo"
-          />
+          <a className="m-0 p-0 w-fit" href="#">
+            <Image
+              src={VarosText}
+              alt="Logotipo da VAROS com nome da empresa em baixo"
+            />
+          </a>
           <div className="pr-20">
             <p>VAROS 2023</p>
             <p>Todos os direitos reservados</p>

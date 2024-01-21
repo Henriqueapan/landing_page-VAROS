@@ -14,7 +14,7 @@ export const handleStylization = (
     case "base":
       if (stylization.twColor === "gray")
         className += "font-bold bg-grey-800 text-grey-100";
-      else className;
+      else className += "font-bold bg-fl-green text-c-black";
       break;
     case "outlined":
       if (stylization.twColor === "gray")

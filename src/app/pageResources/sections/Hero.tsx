@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <ContentWrapper
       Element="section"
-      className="flex flex-row justify-between max-w-[1100px]"
+      className="flex flex-row justify-between max-w-[1100px] xl:mt-40 mt-20"
     >
       <header className="flex flex-col">
         <h1
