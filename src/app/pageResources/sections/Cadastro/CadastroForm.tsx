@@ -44,18 +44,20 @@ export default function CadastroForm() {
 
   const [message, setMessage] = useState("");
 
-  async function sendData(): Promise<void> {
-    const res = await cadastroFormSubmitAction(fieldValues);
-
-    setMessage(res.message);
-  }
-
   useEffect(() => {
+    async function sendData(): Promise<void> {
+      const res = await cadastroFormSubmitAction(fieldValues);
+
+      setMessage(res.message);
+      console.log(res.message);
+      console.log(res.content);
+    }
+
     if (!Object.keys(fieldErrors).length && hasSubmitted) {
       sendData().finally();
       return;
     }
-  }, [hasSubmitted, fieldErrors]);
+  }, [hasSubmitted, fieldErrors, fieldValues]);
 
   const getFieldValue = (evt: ChangeEvent<HTMLInputElement>) => {
     if (!evt) return;
@@ -93,10 +95,12 @@ export default function CadastroForm() {
           <input
             {...inputDefinition}
             className="w-full border border-grey-700 bg-grey-800 text-grey-600
-                  rounded-[4px] py-[13px] px-[19px] mb-6"
+                  rounded-[4px] py-[13px] px-[19px]"
             onChange={getFieldValue}
           />
-          <p>{fieldErrors[inputDefinition.name]}</p>
+          <p className={"mt-0.5 mb-6 text-xs text-red-500 font-semibold h-0"}>
+            {fieldErrors[inputDefinition.name]}
+          </p>
         </React.Fragment>
       ))}
       <button

@@ -11,8 +11,8 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Varos",
-  description: "Invista aqui rsrsrrs",
+  title: "VAROS",
+  description: "Investir de forma mais inteligente passa por aqui",
 };
 
 export default function RootLayout({
