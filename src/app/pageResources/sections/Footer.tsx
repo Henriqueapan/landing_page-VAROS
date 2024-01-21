@@ -85,7 +85,7 @@ const footerListItemArray: Array<TFooterListItem> = [
 export default function Footer() {
   return (
     <ContentWrapper Element="footer" className="mt-32 pt-14">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col gap-8 xl:flex-row justify-between">
         <div className="flex flex-col justify-between gap-6">
           <a className="m-0 p-0 w-fit" href="#">
             <Image
@@ -125,7 +125,7 @@ type TFooterListItemAnchor = {
 
 function FooterListItem({ ...props }: TFooterListItem) {
   return (
-    <li className="[&_a:not(:last-child)]:mb-6 mx-2">
+    <li className="[&_a:not(:last-child)]:mb-6 mx-2 my-8 lg:my-0">
       <p className="text-2xl mb-6 font-bold">{props.title}</p>
       {props.content.map((listItemAnchor, idx) => (
         <a
