@@ -194,7 +194,7 @@ function MobileMenu({ logo, mainContent, sideContent }: TNavbar) {
         </div>
         {isMobileMenuOpen ? (
           <div
-            className="w-full h-[100svh] pt-14 pb-80 bg-c-black absolute overflow-y-scroll z-[100] top-auto min-w-[350px]
+            className="w-full h-[100svh] pt-14 pb-80 bg-c-black absolute overflow-y-scroll z-[100] top-auto
                       left-[0%] -translate-x-[0%] border-t border-t-grey-800"
           >
             <div className="h-[100vh]">
