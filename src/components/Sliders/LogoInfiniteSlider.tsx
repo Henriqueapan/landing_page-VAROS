@@ -51,7 +51,7 @@ export default function LogoInfiniteSlider(props: {
              bg-[linear-gradient(to_right,transparent,#131313_85%)]"
       />
       <div className="h-fit text-center pl-8 mr-16 text-nowrap">visto em</div>
-      <div className="overflow-x-hidden flex flex-nowrap">
+      <div className="overflow-x-hidden xs:max-w-none max-w-32 flex flex-nowrap">
         <SliderLogoList />
         <SliderLogoList />
       </div>

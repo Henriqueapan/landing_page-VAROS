@@ -117,7 +117,7 @@ export default function Reviews() {
           </div>
         </>
       </header>
-      <div className="min-w-[350px]">
+      <div className="min-w-[305px]">
         <Image src={Professores} alt="Professores" className="mb-[72px]" />
         <NotasDisplay />
       </div>
