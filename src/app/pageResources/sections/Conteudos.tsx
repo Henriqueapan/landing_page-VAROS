@@ -303,7 +303,7 @@ function DropdownButtonWithMenu({
       </Button>
       <AnimatePresence>
         <motion.div
-          className="border border-grey-800 rounded-[32px] bg-grey-900 text-grey-100 flex justify-center"
+          className="border border-grey-800 rounded-[32px] bg-grey-900 text-grey-100 flex justify-start"
           animate={isActive ? "open" : "closed"}
           initial="closed"
           exit="closed"
@@ -328,7 +328,7 @@ function DropdownButtonWithMenu({
 function handleSubContentMenuItemStylization(isActive: boolean) {
   const defaultClassName =
     "text-sm font-semibold p-4 " +
-    "rounded-[32px] flex flex-row justify-center gap-4 text-nowrap box-border cursor-pointer";
+    "rounded-[32px] flex flex-row justify-start gap-4 text-nowrap box-border cursor-pointer";
   return defaultClassName + (isActive ? " border-0 bg-grey-800/50" : "");
 }
 

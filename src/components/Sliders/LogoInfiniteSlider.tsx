@@ -66,7 +66,7 @@ function SliderLogoList() {
                 animate-infinite-scroll"
     >
       {logoObjectArray.map((logoObject, key) => (
-        <li key={key} className="mx-4 z-10">
+        <li key={key} className="mx-8 z-10">
           <Image src={logoObject.logoSrc} alt={logoObject.logoAlt} />
         </li>
       ))}

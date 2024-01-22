@@ -155,8 +155,7 @@ function MobileMenu({ logo, mainContent, sideContent }: TNavbar) {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      window.scroll({ top: 0 });
-      // window.document.body.style.overflow = "hidden";
+      window.document.body.style.overflow = "hidden";
     } else window.document.body.style.overflow = "scroll";
   }, [isMobileMenuOpen]);
 
@@ -187,69 +186,68 @@ function MobileMenu({ logo, mainContent, sideContent }: TNavbar) {
   } satisfies Variants;
 
   return (
-    <div className="xl:hidden relative w-full">
-      <div className="w-full py-6 px-4 top-0 left-0 flex flex-row justify-between">
-        <Image src={logo} alt="Logotipo VAROS" />
-        <Hamburger onToggle={setIsMobileMenuOpen} />
-      </div>
-      <AnimatePresence>
-        <motion.div
-          className="w-full bg-c-black absolute overflow-y-scroll z-[100] top-auto min-w-[350px] left-[50%]
-                    -translate-x-[50%] border-b-2 border-b-grey-600"
-          animate={isMobileMenuOpen ? "open" : "close"}
-          initial={"closed"}
-          exit={"closed"}
-          variants={menuTransitionVariants}
-        >
-          <hr className="border-grey-800 mb-14" />
-          <div className="flex flex-col justify-between self-center max-w-[500px] mx-auto px-6">
-            <ul className="flex flex-col-reverse gap-4">
-              {sideContent.map((content, idx) => (
-                <li key={idx}>
-                  {content.signInButton ? (
-                    <Anchor
-                      stylization={{ type: "outlined", twColor: "gray" }}
-                      className="!border rounded-[4px] !border-doc !text-lg !font-semibold tracking-widest"
-                    >
-                      <Image src={content.logo} alt="#" />
-                      <span>{content.title.toUpperCase()}</span>
-                    </Anchor>
-                  ) : (
-                    <Anchor
-                      stylization={{ type: "base", twColor: "green" }}
-                      className="border rounded-[4px] !border-doc !text-lg !font-semibold tracking-widest"
-                    >
-                      <span>{content.title.toUpperCase()}</span>
-                    </Anchor>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <ul className="mt-10">
-              {mainContent.map((content, idx) => {
-                const className =
-                  idx !== mainContent.length - 1 && !content.subContent
-                    ? "border-b border-b-grey-800"
-                    : "";
-                return (
-                  <li key={idx} className={className}>
-                    {content.subContent ? (
-                      <MobileMenuDropdownAnchor {...content} />
-                    ) : (
-                      <a href={content.href}>
-                        <div className="p-6 font-bold text-doc">
-                          {content.title}
-                        </div>
-                      </a>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+    <nav className="h-[96px] z-[100] xl:hidden">
+      <div className="xl:hidden fixed left-0 top-0 w-full">
+        <div className="w-full py-6 px-4 top-0 left-0 flex flex-row justify-between bg-c-black">
+          <Image src={logo} alt="Logotipo VAROS" />
+          <Hamburger onToggle={setIsMobileMenuOpen} />
+        </div>
+        {isMobileMenuOpen ? (
+          <div
+            className="w-full h-[100svh] pt-14 pb-80 bg-c-black absolute overflow-y-scroll z-[100] top-auto min-w-[350px]
+                      left-[0%] -translate-x-[0%] border-t border-t-grey-800"
+          >
+            <div className="h-[100vh]">
+              <div className="flex flex-col justify-between self-center max-w-[500px] mx-auto px-6">
+                <ul className="flex flex-col-reverse gap-4">
+                  {sideContent.map((content, idx) => (
+                    <li key={idx}>
+                      {content.signInButton ? (
+                        <Anchor
+                          stylization={{ type: "outlined", twColor: "gray" }}
+                          className="!border rounded-[4px] !border-doc !text-lg !font-semibold tracking-widest"
+                        >
+                          <Image src={content.logo} alt="#" />
+                          <span>{content.title.toUpperCase()}</span>
+                        </Anchor>
+                      ) : (
+                        <Anchor
+                          stylization={{ type: "base", twColor: "green" }}
+                          className="border rounded-[4px] !border-doc !text-lg !font-semibold tracking-widest"
+                        >
+                          <span>{content.title.toUpperCase()}</span>
+                        </Anchor>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+                <ul className="mt-10">
+                  {mainContent.map((content, idx) => {
+                    const className =
+                      idx !== mainContent.length - 1 && !content.subContent
+                        ? "border-b border-b-grey-800"
+                        : "";
+                    return (
+                      <li key={idx} className={className}>
+                        {content.subContent ? (
+                          <MobileMenuDropdownAnchor {...content} />
+                        ) : (
+                          <a href={content.href}>
+                            <div className="p-6 font-bold text-doc">
+                              {content.title}
+                            </div>
+                          </a>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
-    </div>
+        ) : null}
+      </div>
+    </nav>
   );
 }
 

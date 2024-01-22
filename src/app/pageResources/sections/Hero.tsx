@@ -162,7 +162,7 @@ function BlurredLightProductCardDecoration(
         height: props.height + "px",
         background: `radial-gradient(
                     50% 50% at 50% 50%,
-                    rgb(${props.centerColor[0]}, ${props.centerColor[1]}, ${props.centerColor[2]}) 0%,
+                    rgba(${props.centerColor[0]}, ${props.centerColor[1]}, ${props.centerColor[2]}, 45%) 0%,
                     rgba(${props.tipColor[0]}, ${props.tipColor[1]}, ${props.tipColor[2]}, 0) 100%
                     )`,
         filter: "blur(10px)",
